@@ -67,17 +67,17 @@ console.log(wordFilter("мат привет мат Мат привет мАт м
 
 
 
-let changeOfCase = function (stringOrText, word) {
+let wordFilter = function (stringOrText, word) {
   let newStringForAlert = "";
   let stringWord = stringOrText.toLowerCase().split(' ');
   for (let i = 0; i < stringWord.length; i++) {
     if (stringWord[i]  === word.toLowerCase()) {
-      newString += stringWord[i].replace(stringWord[i], "***") + ' ';
+      newStringForAlert += stringWord[i].replace(stringWord[i], "***") + ' ';
     } else if (stringWord[i] !== word) {
-      newString += stringWord[i] + ' ';
+      newStringForAlert += stringWord[i] + ' ';
     }
   }
   return newStringForAlert;
 };
 
-console.log(changeOfCase("Жопа жОпа привет жопа", "жопа"));
+console.log(wordFilter("Жопа жОпа привет жопа", "жопа"));
