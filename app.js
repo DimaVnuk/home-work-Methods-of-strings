@@ -54,10 +54,7 @@ console.log(parameterOfString("my Valentine hi"));
 
 
 
-
-
-
-let wordFilter = function (newString) {
+/* let wordFilter = function (newString) {
     if (newString.indexOf('мат') + 1) {
       return  newString.replace(/мат/gi, "***");
     } else {
@@ -65,7 +62,22 @@ let wordFilter = function (newString) {
     }
 };
 
-console.log(wordFilter("мат привет мат Мат привет мАт матмат приветМат"));
+console.log(wordFilter("мат привет мат Мат привет мАт матмат приветМат")); */
 
 
 
+
+let changeOfCase = function (stringOrText, word) {
+  let newStringForAlert = "";
+  let stringWord = stringOrText.toLowerCase().split(' ');
+  for (let i = 0; i < stringWord.length; i++) {
+    if (stringWord[i]  === word.toLowerCase()) {
+      newString += stringWord[i].replace(stringWord[i], "***") + ' ';
+    } else if (stringWord[i] !== word) {
+      newString += stringWord[i] + ' ';
+    }
+  }
+  return newStringForAlert;
+};
+
+console.log(changeOfCase("Жопа жОпа привет жопа", "жопа"));
