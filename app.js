@@ -2,11 +2,9 @@
 
 
 let stringOfReduction = function(stringOne){
-let cutString;
-  if(stringOne.length > 30){
-    cutString = stringOne.slice(0,30)
-  }
-return `${cutString}...`
+let cutString = stringOne.slice(0, 30);
+  if (stringOne.length > 30) return `${cutString}...`;
+  return stringOne;
 }
 
 console.log(stringOfReduction('And I want to remember it. I never want to forget it.'))
