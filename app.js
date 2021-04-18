@@ -4,7 +4,6 @@
 let stringOfReduction = function(stringOne){
 let cutString;
   if(stringOne.length > 30){
-    console.log(stringOne.length)
     cutString = stringOne.slice(0,30)
   }
 return `${cutString}...`
